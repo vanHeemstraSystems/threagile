@@ -1,3 +1,3 @@
-FROM gitpod/workspace-full AS build
+FROM gitpod/workspace-full
 
-# FROM threagile/threagile
+RUN docker pull threagile/threagile
