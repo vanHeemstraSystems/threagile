@@ -11,7 +11,8 @@ Two files need to be added to the root of this repository:
 1) .gitpod.yml
 
   ```
-  
+  image: 
+    file: .gitpod.Dockerfile
   ```
 
 2) .gitpod.Dockerfile
