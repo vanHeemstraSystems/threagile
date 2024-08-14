@@ -13,3 +13,5 @@ $ ./threagile.sh -create-stub-model -output /app/work
 ```
 
 **NOTE**: If you get a notification ```Permission Denied```, set the file access permission to executable with ```$ chmod +x threagile.sh```.
+
+**NOTE**: If you get a notification ```open /app/work/threagile-stub-model.yaml: permission denied```, read https://mydeveloperplanet.com/2022/10/19/docker-files-and-volumes-permission-denied/
