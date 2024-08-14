@@ -3,8 +3,10 @@
 Execute the following command:
 
 ```
-$ docker run --rm -it threagile/threagile
+$ docker run --rm -it -v "$(pwd)":/app/work threagile/threagile
 ```
+
+The above command mounts the current directory inside the Docker Container at ```/app/work```.
 
 You will be prompted as follows:
 
