@@ -1,10 +1,18 @@
-# 100 - Run Threagile Docker Container (Mandatory)
+# 100 - Run Threagile Docker Container
 
 Execute the following command:
 
 ```
 $ docker run --rm -it -v "$(pwd)":/app/work threagile/threagile
 ```
+
+Or use the script ```threagile.sh```:
+
+```
+$ ./threagile.sh
+```
+
+**NOTE**: If you get a notification ```Permission Denied```, set the file access permission to executable with ```$ chmod +x threagile.sh```.
 
 The above command mounts the current directory inside the Docker Container at ```/app/work```.
 
