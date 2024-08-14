@@ -1,12 +1,12 @@
 # 100 - Run Threagile Docker Container
 
-Execute the following command:
+Execute the following Docker run command:
 
 ```
 $ docker run --rm -it -v "$(pwd)":/app/work threagile/threagile
 ```
 
-Or use the script ```threagile.sh```:
+Or use the script ```threagile.sh``` that will run the above Docker run command for you:
 
 ```
 $ ./threagile.sh
