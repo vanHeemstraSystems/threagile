@@ -1,3 +1,3 @@
 FROM gitpod/workspace-full AS build
 
-FROM threagile/threagile
+# FROM threagile/threagile
