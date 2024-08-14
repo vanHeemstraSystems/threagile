@@ -1,1 +1,2 @@
-image: threagile/threagile
+image: 
+  file: .gitpod.Dockerfile
