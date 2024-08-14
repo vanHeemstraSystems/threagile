@@ -18,9 +18,8 @@ Two files need to be added to the root of this repository:
 2) .gitpod.Dockerfile
 
   ```
-  FROM gitpod/workspace-full AS build
+  FROM gitpod/workspace-full
 
-  FROM threagile/threagile
-  COPY --from=build . .
+  RUN docker pull threagile/threagile
   ``` 
 
