@@ -1,4 +1,4 @@
-# 100 - Run Threagile Docker Container
+# 100 - Run Threagile Docker Container (Mandatory)
 
 Execute the following command:
 
