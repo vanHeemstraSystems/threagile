@@ -13,6 +13,8 @@ Based on "Threagile on YouTube" at https://www.youtube.com/channel/UCnhdWW64-BNS
 
 Based on "How_To_Combat_Risks_Directly_From_Within_Your_IDE" at https://deepsec.net/docs/Slides/2020/How_To_Combat_Risks_Directly_From_Within_Your_IDE_Christian_Schneider.pdf
 
+Based on "ThreagilePlus - A User Interface for Threagile" at https://github.com/ChillAndImprove/ThreagilePlus
+
 ## 100 - Introduction
 
 See [README.md](./100/README.md)
