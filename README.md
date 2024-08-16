@@ -11,6 +11,8 @@ Based on "Threagile on Github" at https://github.com/threagile
 
 Based on "Threagile on YouTube" at https://www.youtube.com/channel/UCnhdWW64-BNSQYzEKVGzp5A
 
+Based on "Christian Schneider - Threagile- Agile Threat Modeling w/Open-Srce Tools w/in IDE- DEF CON 28SM ASV" at https://www.youtube.com/watch?v=LwyQ9W_vGlo
+
 Based on "How_To_Combat_Risks_Directly_From_Within_Your_IDE" at https://deepsec.net/docs/Slides/2020/How_To_Combat_Risks_Directly_From_Within_Your_IDE_Christian_Schneider.pdf
 
 Based on "ThreagilePlus - A User Interface for Threagile" at https://github.com/ChillAndImprove/ThreagilePlus
