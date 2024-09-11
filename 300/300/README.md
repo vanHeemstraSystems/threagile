@@ -15,6 +15,12 @@ Run the following command (using the script file):
 $ ./threagile.sh  -create-example-model -output /app/work
 ```
 
+You will be prompted with:
+
+```
+An example model was created named threagile-example-model.yaml in the output directory.
+```
+
 An example model was created and that's a little bit more filled so
 6:02
 if you take a look at that in the ide we see some data assets in it and we see some some more
