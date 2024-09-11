@@ -2,3 +2,4 @@
 vscode:
   extensions:
     - redhat.vscode-yaml
+    - numso.prettier-standard-vscode
