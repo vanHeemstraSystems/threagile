@@ -319,3 +319,166 @@ risk_tracking:
 #  - tech-asset-source-id-E:tech-asset-target-id-F:tech-asset-source-id-G:tech-asset-target-id-H
 #  - tech-asset-source-id-M:tech-asset-target-id-N:tech-asset-source-id-O
 ```
+
+You can then in your Integrated Development Environment (IDE) - here: Visual Code - or whatever editor you like to edit yaml files with you can fill that.
+
+So you can create those contents like for example some ```data assets``` where you describe the data assets that you're using in your threat model. 
+
+```
+data_assets:
+
+  Some Data Asset:
+    id: some-data
+    description: Some Description
+    usage: business # values: business, devops
+    tags:
+    origin: Some Origin
+    owner: Some Owner
+    quantity: many # values: very-few, few, many, very-many
+    confidentiality: confidential # values: public, internal, restricted, confidential, strictly-confidential
+    integrity: critical # values: archive, operational, important, critical, mission-critical
+    availability: operational # values: archive, operational, important, critical, mission-critical
+    justification_cia_rating: Some Justification
+```
+
+Especially the ```confidentiality```, ```integrity```, and ```availability``` and it has every data asset.
+
+You can have multiple data assets.
+
+It can have some ```id``` and that id is being referenced throughout the other systems.
+
+You can also create ```technical assets``` here:
+
+```
+technical_assets:
+
+  Some Technical Asset:
+    id: some-component
+    description: Some Description
+    type: process # values: external-entity, process, datastore
+    usage: business # values: business, devops
+    used_as_client_by_human: false
+    out_of_scope: false
+    justification_out_of_scope:
+    size: component # values: system, service, application, component
+    technology: web-service-rest # values: see help
+    tags:
+      - some-tag
+      - some-other-tag
+    internet: false
+    machine: virtual # values: physical, virtual, container, serverless
+    encryption: none # values: none, transparent, data-with-symmetric-shared-key, data-with-asymmetric-shared-key, data-with-enduser-individual-key
+    owner: Some Owner
+    confidentiality: confidential # values: public, internal, restricted, confidential, strictly-confidential
+    integrity: critical # values: archive, operational, important, critical, mission-critical
+    availability: critical # values: archive, operational, important, critical, mission-critical
+    justification_cia_rating: Some Justification
+    multi_tenant: false
+    redundant: false
+    custom_developed_parts: true
+    data_assets_processed: # sequence of IDs to reference
+      - some-data
+    data_assets_stored: # sequence of IDs to reference
+    data_formats_accepted: # sequence of formats like: json, xml, serialization, file, csv
+      - xml
+    communication_links:
+      Some Traffic:
+        target: some-other-component
+        description: Some Description
+        protocol: https # values: see help
+        authentication: none # values: none, credentials, session-id, token, client-certificate, two-factor
+        authorization: none # values: none, technical-user, enduser-identity-propagation
+        tags:
+        vpn: false
+        ip_filtered: false
+        readonly: false
+        usage: business # values: business, devops
+        data_assets_sent: # sequence of IDs to reference
+          - some-data
+        data_assets_received: # sequence of IDs to reference
+
+
+  Some Other Technical Asset:
+    id: some-other-component
+    description: Some Description
+    type: process # values: external-entity, process, datastore
+    usage: business # values: business, devops
+    used_as_client_by_human: false
+    out_of_scope: false
+    justification_out_of_scope:
+    size: component # values: system, service, application, component
+    technology: web-service-rest # values: see help
+    tags:
+      - some-tag
+      - some-other-tag
+    internet: false
+    machine: virtual # values: physical, virtual, container, serverless
+    encryption: none # values: none, transparent, data-with-symmetric-shared-key, data-with-asymmetric-shared-key, data-with-enduser-individual-key
+    owner: Some Owner
+    confidentiality: confidential # values: public, internal, restricted, confidential, strictly-confidential
+    integrity: critical # values: archive, operational, important, critical, mission-critical
+    availability: critical # values: archive, operational, important, critical, mission-critical
+    justification_cia_rating: Some Justification
+    multi_tenant: false
+    redundant: false
+    custom_developed_parts: true
+    data_assets_processed: # sequence of IDs to reference
+      - some-data
+    data_assets_stored: # sequence of IDs to reference
+    data_formats_accepted: # sequence of formats like: json, xml, serialization, file, csv
+      - xml
+    communication_links:
+```
+
+These technical assets do have some kind of ```confidentiality```, ```integrity```, and ```availability``` rating. 
+
+
+MORE
+
+They do have some type whether it's an external entity a process or data
+3:21
+structure they do have some usage stuff here as well so uh whether it's devops or business
+3:28
+usage whether it's used by human or out of scope in total and it has some kind of technology
+3:34
+setting and you can even tag things technology setting something i'm going to present in a few minutes
+3:40
+is where the the rules basically kick in the risk rules
+3:46
+to determine different risks based on different technologies and how they interpret
+3:51
+also i map on the assets that are being processed or stored so
+3:58
+here this is processing one data asset and i have communication links so every
+4:04
+technical asset can have outgoing communication links i just have to define the target id
+4:10
+a protocol that's also from an enum that i'm going to present it's extendable and also a little bit
+4:16
+more in terms of what data is sent and eventually received some other technical assets we see here
+4:23
+in the stop model it's a minimal model then we define the trust boundaries a trust boundary also
+4:29
+and we can have multiple ones has an id and it's a different type it can be a
+4:35
+cloud-based network security group or just some container platform based isolation policy or
+4:42
+basically some classic network based trust boundary on execution environment and again you map
+4:48
+the technical assets that are inside this trust boundary and eventually if you do nest trust boundaries then you
+4:55
+can nest some other trust boundaries here as well then you can define a shared runtime or
+5:01
+multiple shared runtimes like virtualization engines where the same hardware in terms of availability risk is sharing
+5:08
+or being shared across different technical assets you can also add custom risks but more
+5:14
+on this later and you can have some risk tracking here but that's something i'm going to present later as well
+5:20
+that's a minimal model and we can extend that in the ide that should be simple and easy
+5:26
+or whatever kind of editor you like i'm using intellij but that really doesn't relate to that kind of ide whatever you like it could be even
+5:32
+vi and but it would be more funny for the
+5:38
+presentation to have an example model and i'm going to show you that as well
