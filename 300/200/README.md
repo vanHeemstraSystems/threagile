@@ -555,4 +555,4 @@ risk_tracking:
     checked_by: John Doe
 ```
 
-That's a minimal model and we can extend that in the IDE that should be simple and easy or whatever kind of editor you like - e.g. using intelliJ -  but that really doesn't relate to that kind of IDE. Whatever you like, it could be even VIM and but it would be more funny for the presentation to have an ```example model``` and we're going to show you that next.
+That's a minimal model and we can extend that in the IDE that should be simple and easy or whatever kind of editor you like - e.g. using intelliJ -  but that really doesn't relate to that kind of IDE. Whatever you like, it could be even VIM but it would be more funny for the presentation to have an ```example model``` and we're going to show you that next.
