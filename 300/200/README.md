@@ -396,8 +396,53 @@ technical_assets:
         data_assets_sent: # sequence of IDs to reference
           - some-data
         data_assets_received: # sequence of IDs to reference
+```
 
+These technical assets do have some kind of ```confidentiality```, ```integrity```, and ```availability``` rating. 
 
+They do have some ```type``` whether it's an ```external entity```, a ```process```, or ```data store```. 
+
+They do have some ```usage``` here as well so whether it's ```devops``` or ```business```usage.
+
+Whether it's used by ```human``` or ```out of scope``` in total.
+
+And it has some kind of ```technology``` setting and you can even ```tag``` things. 
+
+```Technology``` setting, something we're going to present in a few minutes, is where the the rules basically kick in, the risk rules to determine different risks based on different technologies and how they interoperate.
+
+Also we map on the assets that are being ```processed``` or ```stored```:
+
+```
+    data_assets_processed: # sequence of IDs to reference
+      - some-data
+    data_assets_stored: # sequence of IDs to reference
+```
+
+And we have ```communication links``` so every technical asset can have outgoing communication links.
+
+```
+    communication_links:
+      Some Traffic:
+        target: some-other-component
+        description: Some Description
+        protocol: https # values: see help
+        authentication: none # values: none, credentials, session-id, token, client-certificate, two-factor
+        authorization: none # values: none, technical-user, enduser-identity-propagation
+        tags:
+        vpn: false
+        ip_filtered: false
+        readonly: false
+        usage: business # values: business, devops
+        data_assets_sent: # sequence of IDs to reference
+          - some-data
+        data_assets_received: # sequence of IDs to reference
+```
+
+You just have to define the ```target``` id, a ```protocol``` - that's also from an enum that we-re going to present, it's extendable - and also a little bit more in terms of what data is ```sent``` and eventually ```received```.
+
+Some other technical assets we see here in the stub model, it's a minimal model:
+
+```
   Some Other Technical Asset:
     id: some-other-component
     description: Some Description
@@ -430,34 +475,22 @@ technical_assets:
     communication_links:
 ```
 
-These technical assets do have some kind of ```confidentiality```, ```integrity```, and ```availability``` rating. 
+Then we define the ```trust boundaries```:
 
-They do have some ```type``` whether it's an ```external entity```, a ```process```, or ```data store```. 
+```
+trust_boundaries:
 
-They do have some ```usage``` here as well so whether it's ```devops``` or ```business```usage.
+  Some Trust Boundary:
+    id: some-network
+    description: Some Description
+    type: network-dedicated-hoster # values: see help
+    tags:
+    technical_assets_inside: # sequence of IDs to reference
+      - some-component
+    trust_boundaries_nested: # sequence of IDs to reference
+```
 
-Whether it's used by ```human``` or ```out of scope``` in total.
-
-And it has some kind of ```technology``` setting and you can even ```tag``` things. 
-
-```Technology``` setting, something we're going to present in a few minutes, is where the the rules basically kick in, the risk rules to determine different risks based on different technologies and how they interoperate.
-
-
-
-
-Also we map on the assets that are being processed or stored so
-
-
-3:58
-here this is processing one data asset and i have communication links so every
-4:04
-technical asset can have outgoing communication links i just have to define the target id
-4:10
-a protocol that's also from an enum that i'm going to present it's extendable and also a little bit
-4:16
-more in terms of what data is sent and eventually received some other technical assets we see here
-4:23
-in the stop model it's a minimal model then we define the trust boundaries a trust boundary also
+A trust boundary also
 4:29
 and we can have multiple ones has an id and it's a different type it can be a
 4:35
