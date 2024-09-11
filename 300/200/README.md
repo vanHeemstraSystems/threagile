@@ -432,22 +432,22 @@ technical_assets:
 
 These technical assets do have some kind of ```confidentiality```, ```integrity```, and ```availability``` rating. 
 
+They do have some ```type``` whether it's an ```external entity```, a ```process```, or ```data store```. 
 
-MORE
+They do have some ```usage``` here as well so whether it's ```devops``` or ```business```usage.
 
-They do have some type whether it's an external entity a process or data
-3:21
-structure they do have some usage stuff here as well so uh whether it's devops or business
-3:28
-usage whether it's used by human or out of scope in total and it has some kind of technology
-3:34
-setting and you can even tag things technology setting something i'm going to present in a few minutes
-3:40
-is where the the rules basically kick in the risk rules
-3:46
-to determine different risks based on different technologies and how they interpret
-3:51
-also i map on the assets that are being processed or stored so
+Whether it's used by ```human``` or ```out of scope``` in total.
+
+And it has some kind of ```technology``` setting and you can even ```tag``` things. 
+
+```Technology``` setting, something we're going to present in a few minutes, is where the the rules basically kick in, the risk rules to determine different risks based on different technologies and how they interoperate.
+
+
+
+
+Also we map on the assets that are being processed or stored so
+
+
 3:58
 here this is processing one data asset and i have communication links so every
 4:04
