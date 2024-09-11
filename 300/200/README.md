@@ -28,7 +28,7 @@ A minimal stub model was created named threagile-stub-model.yaml in the output d
 
 Now you can look at the content of the ```threagile-stub-model.yaml``` file:
 
-```title=threagile-stub-model.yaml
+```text title="threagile-stub-model.yaml"
 threagile_version: 1.0.0
 
 # NOTE:
