@@ -490,28 +490,69 @@ trust_boundaries:
     trust_boundaries_nested: # sequence of IDs to reference
 ```
 
-A trust boundary also
-4:29
-and we can have multiple ones has an id and it's a different type it can be a
-4:35
-cloud-based network security group or just some container platform based isolation policy or
-4:42
-basically some classic network based trust boundary on execution environment and again you map
-4:48
-the technical assets that are inside this trust boundary and eventually if you do nest trust boundaries then you
-4:55
-can nest some other trust boundaries here as well then you can define a shared runtime or
-5:01
-multiple shared runtimes like virtualization engines where the same hardware in terms of availability risk is sharing
-5:08
-or being shared across different technical assets you can also add custom risks but more
-5:14
-on this later and you can have some risk tracking here but that's something i'm going to present later as well
-5:20
-that's a minimal model and we can extend that in the ide that should be simple and easy
-5:26
-or whatever kind of editor you like i'm using intellij but that really doesn't relate to that kind of ide whatever you like it could be even
-5:32
-vi and but it would be more funny for the
-5:38
-presentation to have an example model and i'm going to show you that as well
+A trust boundary, and we can have multiple ones, has an ```id``` and it's a different type; it can be a ```cloud-based network security group``` or just some ```container platform based isolation policy``` or basically some classic ```network based trust boundary on execution environment```. And again you map the ```technical assets``` that are inside this trust boundary and eventually if you do nest trust boundaries then you can nest some other trust boundaries here as well.
+
+Then you can define a ```shared runtime``` or multiple shared runtimes like virtualization engines where the same hardware in terms of availability risk is sharing or being shared across different technical assets:
+
+```
+shared_runtimes:
+
+  Some Shared Runtime:
+    id: some-runtime
+    description: Some Description
+    tags:
+    technical_assets_running: # sequence of IDs to reference
+      - some-component
+      - some-other-component
+```
+
+You can also add ```custom risks``` but more on this later:
+
+```
+individual_risk_categories: # used for adding custom manually identified risks
+
+  Some Individual Risk Example:
+    id: something-strange
+    description: Some text describing the risk category...
+    impact: Some text describing the impact...
+    asvs: V0 - Something Strange
+    cheat_sheet: https://example.com
+    action: Some text describing the action...
+    mitigation: Some text describing the mitigation...
+    check: Check if XYZ...
+    function: business-side # values: business-side, architecture, development, operations
+    stride: repudiation # values: spoofing, tampering, repudiation, information-disclosure, denial-of-service, elevation-of-privilege
+    detection_logic: Some text describing the detection logic...
+    risk_assessment: Some text describing the risk assessment...
+    false_positives: Some text describing the most common types of false positives...
+    model_failure_possible_reason: false
+    cwe: 693
+    risks_identified:
+      <b>Example Individual Risk</b> at <b>Some Technical Asset</b>:
+        severity: critical # values: low, medium, elevated, high, critical
+        exploitation_likelihood: likely # values: unlikely, likely, very-likely, frequent
+        exploitation_impact: medium # values: low, medium, high, very-high
+        data_breach_probability: probable # values: improbable, possible, probable
+        data_breach_technical_assets: # list of technical asset IDs which might have data breach
+          - some-component
+        most_relevant_data_asset:
+        most_relevant_technical_asset: some-component
+        most_relevant_communication_link:
+        most_relevant_trust_boundary:
+        most_relevant_shared_runtime:
+```
+
+And you can have some ```risk tracking``` here but that's something we're going to present later as well:
+
+```
+risk_tracking:
+
+  unencrypted-asset@some-component: # wildcards "*" between the @ characters are possible
+    status: accepted # values: unchecked, in-discussion, accepted, in-progress, mitigated, false-positive
+    justification: Risk accepted as tolerable
+    ticket: XYZ-1234
+    date: 2020-01-04
+    checked_by: John Doe
+```
+
+That's a minimal model and we can extend that in the IDE that should be simple and easy or whatever kind of editor you like - e.g. using intelliJ -  but that really doesn't relate to that kind of IDE. Whatever you like, it could be even VIM and but it would be more funny for the presentation to have an ```example model``` and we're going to show you that next.
