@@ -15,6 +15,14 @@ Run the following command (using the script file):
 $ ./threagile.sh  -create-example-model -output /app/work
 ```
 
+**NOTE**: If you get a notification ```Permission Denied```, set the file access permission to executable with ```$ chmod +x threagile.sh```.
+
+**NOTE**: If you get a notification ```open /app/work/threagile-example-model.yaml: permission denied```, run the following command to make the file writeable for the ```owner``` and the ```group``` and ```others``` of the ```threagile-example-model.yaml``` file:
+
+```
+$ chmod gu+w threagile-example-model.yaml
+```
+
 You will be prompted with:
 
 ```
