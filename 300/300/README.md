@@ -1376,6 +1376,17 @@ risk_tracking:
 
 #diagram_tweak_edge_layout: spline # values: spline, polyline, false, ortho (this suppresses edge labels), curved (this suppresses edge labels and can cause problems with edges)
 
+#diagram_tweak_suppress_edge_labels: true
+#diagram_tweak_layout_left_to_right: true
+#diagram_tweak_nodesep: 2
+#diagram_tweak_ranksep: 2
+#diagram_tweak_invisible_connections_between_assets:
+#  - tech-asset-source-id-A:tech-asset-target-id-B
+#  - tech-asset-source-id-C:tech-asset-target-id-D
+#diagram_tweak_same_rank_assets:
+#  - tech-asset-source-id-E:tech-asset-target-id-F:tech-asset-source-id-G:tech-asset-target-id-H
+#  - tech-asset-source-id-M:tech-asset-target-id-N:tech-asset-source-id-O
+
 ```
 
 
@@ -1401,7 +1412,15 @@ example model dot yaml and output is app
 7:01
 work and i make it for both that way it works on my local file on
 7:08
-the local file system in the folder here and it generates a few things so how does the
+the local file system in the folder here and it generates a few things 
+
+
+```
+$ ./threagile.sh -model /app/work/threagile-example-model.yaml -output /app/work -verbose
+```
+
+
+so how does the
 7:13
 docker container do that it's simply by the mapping of the volume so that inside the docker
 7:19
