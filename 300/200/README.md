@@ -17,3 +17,9 @@ $ ./threagile.sh -create-stub-model -output /app/work
 **NOTE**: If you get a notification ```open /app/work/threagile-stub-model.yaml: permission denied```, read https://mydeveloperplanet.com/2022/10/19/docker-files-and-volumes-permission-denied/
 
 TO DO: The above error is not fixed!
+
+Run the following command to make the file writeable for the ```owner``` and the ```group``` of the ```threagile-stub-model.yaml``` file:
+
+```
+$ chmod gu+w threagile-stub-model.yaml
+```
