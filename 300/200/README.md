@@ -320,7 +320,7 @@ risk_tracking:
 #  - tech-asset-source-id-M:tech-asset-target-id-N:tech-asset-source-id-O
 ```
 
-You can then in your Integrated Development Environment (IDE) - here: Visual Code - or whatever editor you like to edit yaml files with you can fill that.
+You can then in your Integrated Development Environment (IDE) - here: Visual Studio Code - or whatever editor you like to edit yaml files with you can fill that.
 
 So you can create those contents like for example some ```data assets``` where you describe the data assets that you're using in your threat model. 
 
