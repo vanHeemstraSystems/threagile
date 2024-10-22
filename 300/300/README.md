@@ -1421,10 +1421,17 @@ work and i make it for both that way it works on my local file on
 the local file system in the folder here and it generates a few things 
 
 
+On Linux / macOS:
+
 ```
 $ ./threagile.sh -model /app/work/threagile-example-model.yaml -output /app/work -verbose
 ```
 
+On Windows:
+
+```
+$ threagile.bat -model /app/work/threagile-example-model.yaml -output /app/work -verbose
+```
 
 so how does the
 7:13
