@@ -6,10 +6,16 @@ Execute the following Docker run command:
 $ docker run --rm -it -v "$(pwd)":/app/work threagile/threagile
 ```
 
-Or use the script ```threagile.sh``` that will run the above Docker run command for you:
+Or use the script ```threagile.sh``` for Linux / macOS that will run the above Docker run command for you:
 
 ```
 $ ./threagile.sh
+```
+
+Or use the script ```threagile.bat``` for Windows that will run the above Docker run command for you:
+
+```
+$ threagile.bat
 ```
 
 **NOTE**: If you get a notification ```Permission Denied```, set the file access permission to executable with ```$ chmod +x threagile.sh```.
