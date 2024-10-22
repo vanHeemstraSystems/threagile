@@ -9,10 +9,16 @@ If you want to create an example model (via docker) as a starting point to learn
 
 That's something we're going to use now.
 
-Run the following command (using the script file):
+Run the following command (using the script file) on Linux / macOS:
 
 ```
 $ ./threagile.sh  -create-example-model -output /app/work
+```
+
+Or run the following command (using the script file) on Windows:
+
+```
+$ threagile.bat  -create-example-model -output /app/work
 ```
 
 **NOTE**: If you get a notification ```Permission Denied```, set the file access permission to executable with ```$ chmod +x threagile.sh```.
