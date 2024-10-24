@@ -1395,13 +1395,44 @@ risk_tracking:
 
 ```
 
-If you take a look at that in the IDE we see some data assets in it and we see some some more data assets here:
+If you take a look at that in the IDE we see some **data assets** in it:
 
 ```
+...
+data_assets:
 
+
+  Customer Contracts: &customer-contracts # this example shows the inheritance-like features of YAML
+    id: customer-contracts
+    description: Customer Contracts (PDF)
+    usage: business # values: business, devops
+    tags:
+    origin: Customer
+    owner: Company XYZ
+    quantity: many # values: very-few, few, many, very-many
+    confidentiality: confidential # values: public, internal, restricted, confidential, strictly-confidential
+    integrity: critical # values: archive, operational, important, critical, mission-critical
+    availability: operational # values: archive, operational, important, critical, mission-critical
+    justification_cia_rating: >
+      Contract data might contain financial data as well as personally identifiable information (PII). The integrity and
+      availability of contract data is required for clearing payment disputes.
+
+
+  Customer Contract Summaries:
+    <<: *customer-contracts # here we're referencing the above created asset as base and just overwrite few values
+    id: contract-summaries
+    description: Customer Contract Summaries
+    quantity: very-few # values: very-few, few, many, very-many
+    confidentiality: restricted # values: public, internal, restricted, confidential, strictly-confidential
+    integrity: operational # values: archive, operational, important, critical, mission-critical
+    availability: operational # values: archive, operational, important, critical, mission-critical
+    justification_cia_rating: >
+      Just some summaries.
+
+...
 ```
 
-And we see some more technical assets:
+And we see some more **technical assets**:
 
 ```
 ...
