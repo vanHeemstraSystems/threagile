@@ -48,4 +48,6 @@ And it will auto-complete, helping you to add a version.
 threagile_version: 1.0.0
 ```
 
-Moreover, a red line indicates that required entries are missing. If you hoover over the red line, a modal window will even show you which mandatory entries are missing.
+Moreover, a red line indicates that required entries are missing. If you hover over the red line, a modal window will even show you which mandatory entries are missing.
+
+In addition, if you hover over an entry (aka a *node*), you get more description about it.
