@@ -1498,41 +1498,82 @@ technical_assets:
 
 We have a navigation in the IDE here that's pretty nice.
 
-So we can just go to the Apache web server and we see the rating and the data that's being
-6:23
-processed and stuff like that and we have some trust boundaries here as well so
-6:28
-we can see it's a little more of a filled model and we can just use this kind of model to
-6:34
-create some nice results by executing threshold on that
-6:39
-so it's basically fragile and then just I'm giving it the model
-6:46
-argument and that's inside the container app/work threagile-example-model.yaml and output is app
-7:01
-work and I make it for both that way it works on my local file on
-7:08
-the local file system in the folder here and it generates a few things 
+So we can just go to the Apache web server and we see the rating and the data that's being processed and stuff like that.
 
+```
+...
+
+...
+```
+
+Here is an example of **communication links**:
+
+```
+...
+    communication_links:
+      ERP System Traffic:
+        target: erp-system
+        description: Link to the ERP system
+        protocol: https # values: see help
+        authentication: token # values: none, credentials, session-id, token, client-certificate, two-factor
+        authorization: technical-user # values: none, technical-user, enduser-identity-propagation
+        tags:
+        vpn: false
+        ip_filtered: false
+        readonly: false
+        usage: business # values: business, devops
+        data_assets_sent: # sequence of IDs to reference
+          - customer-accounts
+          - customer-operational-data
+          - internal-business-data
+        data_assets_received: # sequence of IDs to reference
+          - customer-accounts
+          - customer-operational-data
+          - customer-contracts
+          - internal-business-data
+        #diagram_tweak_weight: 5
+        #diagram_tweak_constraint: false
+...
+```
+
+And we have some **trust boundaries** here as well:
+
+```
+...
+trust_boundaries:
+
+
+  Web DMZ:
+    id: web-dmz
+    description: Web DMZ
+    type: network-cloud-security-group # values: see help
+    tags:
+    technical_assets_inside: # sequence of IDs to reference
+      - apache-webserver
+      - marketing-cms
+    trust_boundaries_nested: # sequence of IDs to reference
+
+...
+```
+
+So we can see it's a little more of a filled model and we can just use this kind of model to create some nice results by executing threshold on that.
+
+So it's basically ```threagile``` and then just I'm giving it the ```-model``` argument and that's inside the container ```/app/work/threagile-example-model.yaml``` and ```-output``` is ```/app/work``` and I make it for both.
+
+That way it works on my local file on the local file system in the folder here and it generates a few things.
 
 On Linux / macOS:
 
 ```
-$ ./threagile.sh -model /app/work/threagile-example-model.yaml -output /app/work -verbose
+$ ./threagile.sh -verbose -model /app/work/threagile-example-model.yaml -output /app/work
 ```
 
 On Windows:
 
 ```
-$ threagile.bat -model /app/work/threagile-example-model.yaml -output /app/work -verbose
+$ threagile.bat -verbose -model /app/work/threagile-example-model.yaml -output /app/work
 ```
 
-so how does the
-7:13
-docker container do that it's simply by the mapping of the volume so that inside the docker
-7:19
-container of fragile app work is the folder which is actually the current folder here so that way we can interact that way
-7:26
-nice and in the next few minutes i'm going to go deeper into what kind of risk output was generated
+So how does the Docker container do that? It's simply by the mapping of the volume so that inside the Docker container of threagile ```/app/work``` is the folder which is actually the current folder here. So that way we can interact that way. Nice. And in the next few minutes I'm going to go deeper into what kind of risk output was generated.
 
 MORE
