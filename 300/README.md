@@ -16,7 +16,7 @@ ___
 
 **Components**  
 
-> Depicted as 8-sided polygons / octagons (e.g. Customer Web Client) or ellipses (e.g. Load Balancer) or database (e.g. Database, Fileserver) for technical assets.
+> Depicted as 8-sided polygons / octagons (type: ... e.g. Customer Web Client) or ellipses (type: process e.g. Load Balancer) or database (type: ... e.g. Database, Fileserver) for technical assets.
 
 These refer to the individual systems, applications, or services that process, store, or manage data assets. 
 
