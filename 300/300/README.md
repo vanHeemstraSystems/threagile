@@ -1395,14 +1395,79 @@ risk_tracking:
 
 ```
 
+If you take a look at that in the IDE we see some data assets in it and we see some some more data assets here:
 
-so
-6:02
-if you take a look at that in the ide we see some data assets in it and we see some some more
-6:10
-data assets here and we see some more um technical asset we have a navigation in the ide here that's
-6:16
-pretty pretty nice so we can just go to the apache web server and we see the rating and the data that's being
+```
+
+```
+
+And we see some more technical assets:
+
+```
+...
+technical_assets:
+
+
+  Customer Web Client:
+    id: customer-client
+    description: Customer Web Client
+    type: external-entity # values: external-entity, process, datastore
+    usage: business # values: business, devops
+    used_as_client_by_human: true
+    out_of_scope: true
+    justification_out_of_scope: Owned and managed by enduser customer
+    size: component # values: system, service, application, component
+    technology: browser # values: see help
+    tags:
+    internet: true
+    machine: physical # values: physical, virtual, container, serverless
+    encryption: none # values: none, transparent, data-with-symmetric-shared-key, data-with-asymmetric-shared-key, data-with-enduser-individual-key
+    owner: Customer
+    confidentiality: internal # values: public, internal, restricted, confidential, strictly-confidential
+    integrity: operational # values: archive, operational, important, critical, mission-critical
+    availability: operational # values: archive, operational, important, critical, mission-critical
+    justification_cia_rating: >
+      The client used by the customer to access the system.
+    multi_tenant: false
+    redundant: false
+    custom_developed_parts: false
+    data_assets_processed: # sequence of IDs to reference
+      - customer-accounts
+      - customer-operational-data
+      - customer-contracts
+      - client-application-code
+      - marketing-material
+    data_assets_stored: # sequence of IDs to reference
+    data_formats_accepted: # sequence of formats like: json, xml, serialization, file, csv
+    communication_links:
+      Customer Traffic:
+        target: load-balancer
+        description: Link to the load balancer
+        protocol: https # values: see help
+        authentication: session-id # values: none, credentials, session-id, token, client-certificate, two-factor
+        authorization: enduser-identity-propagation # values: none, technical-user, enduser-identity-propagation
+        tags:
+        vpn: false
+        ip_filtered: false
+        readonly: false
+        usage: business # values: business, devops
+        data_assets_sent: # sequence of IDs to reference
+          - customer-accounts
+          - customer-operational-data
+        data_assets_received: # sequence of IDs to reference
+          - customer-accounts
+          - customer-operational-data
+          - customer-contracts
+          - client-application-code
+          - marketing-material
+        #diagram_tweak_weight: 1
+        #diagram_tweak_constraint: false
+...
+```
+
+We have a navigation in the IDE here that's pretty nice.
+
+So we can just go to the Apache web server and we see the rating and the data that's being
 6:23
 processed and stuff like that and we have some trust boundaries here as well so
 6:28
@@ -1410,13 +1475,11 @@ we can see it's a little more of a filled model and we can just use this kind of
 6:34
 create some nice results by executing threshold on that
 6:39
-so it's basically fragile and then just i'm giving it the model
+so it's basically fragile and then just I'm giving it the model
 6:46
-argument and that's inside the container app work fragile
-6:53
-example model dot yaml and output is app
+argument and that's inside the container app/work threagile-example-model.yaml and output is app
 7:01
-work and i make it for both that way it works on my local file on
+work and I make it for both that way it works on my local file on
 7:08
 the local file system in the folder here and it generates a few things 
 
