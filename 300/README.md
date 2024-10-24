@@ -4,7 +4,7 @@
 
 **Data Assets**  
 
-> Depicted as ...
+> Depicted as ... (not depicted).
 
 These are the valuable pieces of information that an organization holds. 
 
@@ -16,7 +16,7 @@ ___
 
 **Components**  
 
-> Depicted as 8-sided polygons (octagons) for technical assets, ...
+> Depicted as 8-sided polygons / octagons (e.g. Customer Web Client) or ellipses (e.g. Load Balancer) or database (e.g. Database, Fileserver) for technical assets.
 
 These refer to the individual systems, applications, or services that process, store, or manage data assets. 
 
@@ -28,7 +28,7 @@ ___
 
 **Communication Links**  
 
-> Depicted as arrows
+> Depicted as arrows.
 
 These are the pathways through which data flows between components. 
 
@@ -40,7 +40,7 @@ ___
 
 **Trust Boundaries**
 
-> Depicted as dotted rectangles
+> Depicted as dotted rectangles.
 
 These define the limits within which data is considered secure and trustworthy. 
 
