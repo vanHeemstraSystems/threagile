@@ -444,7 +444,7 @@ And we have ```communication links``` so every technical asset can have outgoing
         data_assets_received: # sequence of IDs to reference
 ```
 
-You just have to define the ```target``` id, a ```protocol``` - that's also from an enum that we-re going to present, it's extendable - and also a little bit more in terms of what data is ```sent``` and eventually ```received```.
+You just have to define the ```target``` id, a ```protocol``` - that's also from an enum that we're going to present, it's extendable - and also a little bit more in terms of what data is ```sent``` and eventually ```received```.
 
 Some other technical assets we see here in the stub model, it's a minimal model:
 
