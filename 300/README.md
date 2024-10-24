@@ -16,7 +16,7 @@ ___
 
 **Components**  
 
-> Depicted as ...
+> Depicted as 8-sided polygons (octagons) for technical assets, ...
 
 These refer to the individual systems, applications, or services that process, store, or manage data assets. 
 
