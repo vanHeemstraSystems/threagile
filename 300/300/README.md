@@ -1593,7 +1593,7 @@ So it's basically ```threagile``` and then just I'm giving it the ```-model``` a
 
 That way it works on my local file on the local file system in the folder here and it generates a few things.
 
-**NOTE**: To keep our output well separated from the rest of our files, we here choose to set our output to /app/work/example```, so all generated files and images will end up in the ```example``` directory.
+**NOTE**: To keep our output well separated from the rest of our files, we here choose to set our output to ```/app/work/example```, so all generated files and images will end up in the ```example``` directory. You may have to create the ```example``` directory manually beforehand.
 
 On Linux / macOS:
 
