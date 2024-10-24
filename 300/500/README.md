@@ -36,7 +36,7 @@ Now if you edit a ```threagile.yaml``` file in the root directory of your reposi
 
 You know the schema applies, as in the top of the editor where you have ```threagile.yaml``` file opened, it states ```Threagile - Agile Threat Modeling (schema.json)```.
 
-Try to type for example:
+Try to type for example in ```threagile.yaml``` file:
 
 ```
 threagile_version
@@ -51,3 +51,12 @@ threagile_version: 1.0.0
 Moreover, a red line indicates that required entries are missing. If you hover over the red line, a modal window will even show you which mandatory entries are missing.
 
 In addition, if you hover over an entry (aka a *node*), you get more description about it.
+
+Try adding to ```threagile.yaml``` file:
+
+```
+title:
+```
+
+When hovering over the entry ```title``` it says "Title of the model" and the reference to ```schema.json``` where it is getting this information from.
+
