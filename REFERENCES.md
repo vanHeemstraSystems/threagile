@@ -10,6 +10,8 @@
 
 - [Threagile on YouTube](https://www.youtube.com/channel/UCnhdWW64-BNSQYzEKVGzp5A)
 
+- [Threagile by Diego Pacheco on YouTube](https://www.youtube.com/watch?v=ECyWa5cQy5Q)
+
 - [Christian Schneider - Threagile- Agile Threat Modeling w/Open-Srce Tools w/in IDE- DEF CON 28SM ASV](https://www.youtube.com/watch?v=LwyQ9W_vGlo)
 
 - [How_To_Combat_Risks_Directly_From_Within_Your_IDE](https://deepsec.net/docs/Slides/2020/How_To_Combat_Risks_Directly_From_Within_Your_IDE_Christian_Schneider.pdf)
