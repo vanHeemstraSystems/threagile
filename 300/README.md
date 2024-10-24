@@ -1,6 +1,6 @@
 # 300 - Building Our Application
 
-## Glossary
+## 000 - Glossary
 
 **Data Assets**  
 These are the valuable pieces of information that an organization holds. They can include databases, documents, and any structured or unstructured data that supports business operations and decision-making.
@@ -14,7 +14,6 @@ These refer to the individual systems, applications, or services that process, s
 
 - **Azure Functions**: A serverless compute service that allows you to run code in response to events.
 - **Azure Kubernetes Service (AKS)**: A managed container orchestration service for deploying and managing applications.
-
 ___
 
 **Communication Links**  
@@ -22,7 +21,6 @@ These are the pathways through which data flows between components. They can inc
 
 - **Azure Service Bus**: A messaging service for connecting different applications and services.
 - **Azure API Management**: A service for creating and managing APIs, facilitating communication between components.
-
 ___
 
 **Trust Boundaries**  
@@ -30,7 +28,7 @@ These define the limits within which data is considered secure and trustworthy. 
 
 - **Azure Active Directory**: A service for identity and access management, defining user permissions and access controls.
 - **Azure Security Center**: A unified security management system that provides threat protection and compliance monitoring.
-
+___
 
 ## 100 - Run Threagile Docker Container
 
