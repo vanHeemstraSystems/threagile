@@ -1498,11 +1498,42 @@ technical_assets:
 
 We have a navigation in the IDE here that's pretty nice.
 
-So we can just go to the Apache web server and we see the rating and the data that's being processed and stuff like that.
+So we can just go to the ```Apache Webserver``` and we see the ```justification_cia_rating``` and the ```data``` that's being processed and stuff like that.
 
 ```
 ...
-
+  Apache Webserver:
+    id: apache-webserver
+    #diagram_tweak_order: 0 # affects left to right positioning (only within a trust boundary)
+    description: Apache Webserver hosting the API code and client-side code
+    type: process # values: external-entity, process, datastore
+    usage: business # values: business, devops
+    used_as_client_by_human: false
+    out_of_scope: false
+    justification_out_of_scope:
+    size: application # values: system, service, application, component
+    technology: web-server # values: see help
+    ...
+    justification_cia_rating: >
+      The correct configuration and reachability of the web server is mandatory for all customer usages of the portal.
+    ...
+    multi_tenant: false
+    redundant: false
+    custom_developed_parts: true
+    ...
+    data_assets_processed: # sequence of IDs to reference
+      - customer-accounts
+      - customer-operational-data
+      - customer-contracts
+      - internal-business-data
+      - client-application-code
+      - server-application-code
+    data_assets_stored: # sequence of IDs to reference
+      - client-application-code
+      - server-application-code
+    data_formats_accepted: # sequence of formats like: json, xml, serialization, file, csv
+      - json
+      - file
 ...
 ```
 
