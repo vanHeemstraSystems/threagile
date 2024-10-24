@@ -1593,16 +1593,18 @@ So it's basically ```threagile``` and then just I'm giving it the ```-model``` a
 
 That way it works on my local file on the local file system in the folder here and it generates a few things.
 
+**NOTE**: To keep our output well separated from the rest of our files, we here choose to set our output to /app/work/example```, so all generated files and images will end up in the ```example``` directory.
+
 On Linux / macOS:
 
 ```
-$ ./threagile.sh -verbose -model /app/work/threagile-example-model.yaml -output /app/work
+$ ./threagile.sh -verbose -model /app/work/threagile-example-model.yaml -output /app/work/example
 ```
 
 On Windows:
 
 ```
-$ threagile.bat -verbose -model /app/work/threagile-example-model.yaml -output /app/work
+$ threagile.bat -verbose -model /app/work/threagile-example-model.yaml -output /app/work/example
 ```
 
 So how does the Docker container do that? It's simply by the mapping of the volume so that inside the Docker container of threagile ```/app/work``` is the folder which is actually the current folder here. So that way we can interact that way. Nice. And in the next few minutes I'm going to go deeper into what kind of risk output was generated.
