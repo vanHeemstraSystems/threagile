@@ -1,13 +1,7 @@
-# 400 - Threagile Plus
+# 500 - VS Code tips — JSON schemas for IntelliSense
 
-Threagile Plus is open-source project aims to enhance your experience with threat modeling.
+Based on [Video](https://www.youtube.com/watch?v=m30JiCuW42U)
 
-![finished](https://github.com/user-attachments/assets/d5649c13-a368-410a-b4ff-311ebd32cff8)
+We will use the ```/support/schema.json``` file to allow for IntelliSense in Visual Studio Code when editing the threagile yaml files.
 
-## 100 - Getting Started
-
-See [README.md](./100/README.md)
-
-## 200 - Technical Details
-
-See [README.md](./200/README.md)
+MORE

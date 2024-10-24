@@ -66,8 +66,10 @@ See [README.md](./300/README.md)
 
 See [README.md](./400/README.md)
 
-## 500 - Threagile Plus
+## 500 - VS Code tips — JSON schemas for IntelliSense
 
 See [README.md](./500/README.md)
 
-MORE 
+## 600 - Threagile Plus
+
+See [README.md](./600/README.md)
